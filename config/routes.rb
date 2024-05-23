@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :order_details
+  devise_for :orders
+  devise_for :cart_items
+  devise_for :genres
+  devise_for :addresses
   devise_for :customers, skip: [:passwords], controllers: {
     registrations: "public/registrations",
     sessions: 'public/sessions'
